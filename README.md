@@ -227,12 +227,12 @@ DiagnosisOne.x (get dummary vars for this variable)
 Gender.x
 SiteID.x (get dummary vars)
 ```{r}
-machine_dat =  telehealth_noms_wide_noms[c("Quarter.x", "DiagnosisOne.x", "Gender.x", "HispanicLatino.x", "RaceWhite.x", "RaceBlack.x", "Agegroup.x", "SexualIdentity.x", "OverallHealth.x", "CapableManagingHealthCareNeeds.x", "HandlingDailyLife.x", "ControlLife.x", "DealWithCrisis.x", "GetsAlongWithFamily.x", "SocialSituations.x", "SchoolOrWork.x", "FunctioningHousing.x", "Symptoms.x", "Nervous.x", "Hopeless.x", "Restless.x", "Depressed.x", "EverythingEffort.x", "Worthless.x", "PsychologicalEmotionalProblems.x", "LifeQuality.x", "EnoughEnergyForEverydayLife.x", "PerformDailyActivitiesSatisfaction.x", "HealthSatisfaction.x", "RelationshipSatisfaction.x", "SelfSatisfaction.x", "Tobacco_Use.x", "Alcohol_Use.x", "Cannabis_Use.x", "Cocaine_Use.x", "Meth_Use.x", "RxOpioids_Use.x", "StreetOpioids_Use.x", "ViolenceTrauma.x", "VT_NightmaresThoughts.x", "VT_NotThinkAboutIt.x", "VT_OnGuard.x", "VT_NumbDetached.x", "PhysicallyHurt.x", "NightsHomeless.x", "NightsHospitalMHC.x", "NightsDetox.x", "NightsJail.x", "TimesER.x", "Housing.x", "LivingConditionsSatisfaction.x", "Education.x", "Employment.x", "EnoughMoneyForNeeds.x", "NumTimesArrested.x", "Friendships.x", "EnjoyPeople.x", "BelongInCommunity.x", "SupportFromFamily.x", "SupportiveFamilyFriends.x", "GenerallyAccomplishGoal.x", "telehealth.x", "NightsHospitalMHC.y", "NightsDetox.y", "NightsJail.y", "TimesER.y", "Housing.y", "NumTimesArrested.y")]
+machine_dat =  telehealth_noms_wide_noms[c("Quarter.x", "DiagnosisOne.x", "Gender.x", "HispanicLatino.x", "RaceWhite.x", "RaceBlack.x", "Agegroup.x", "SexualIdentity.x", "OverallHealth.x", "CapableManagingHealthCareNeeds.x", "HandlingDailyLife.x", "ControlLife.x", "DealWithCrisis.x", "GetsAlongWithFamily.x", "SocialSituations.x", "SchoolOrWork.x", "FunctioningHousing.x", "Symptoms.x", "Nervous.x", "Hopeless.x", "Restless.x", "Depressed.x", "EverythingEffort.x", "Worthless.x", "PsychologicalEmotionalProblems.x", "LifeQuality.x", "EnoughEnergyForEverydayLife.x", "PerformDailyActivitiesSatisfaction.x", "HealthSatisfaction.x", "RelationshipSatisfaction.x", "SelfSatisfaction.x", "Tobacco_Use.x", "Alcohol_Use.x", "Cannabis_Use.x", "Cocaine_Use.x", "Meth_Use.x", "RxOpioids_Use.x", "StreetOpioids_Use.x", "ViolenceTrauma.x", "VT_NightmaresThoughts.x", "VT_NotThinkAboutIt.x", "VT_OnGuard.x", "VT_NumbDetached.x", "PhysicallyHurt.x", "NightsHospitalMHC.x", "NightsDetox.x", "NightsJail.x", "TimesER.x", "Housing.x", "LivingConditionsSatisfaction.x", "Education.x", "Employment.x", "EnoughMoneyForNeeds.x", "NumTimesArrested.x", "Friendships.x", "EnjoyPeople.x", "BelongInCommunity.x", "SupportFromFamily.x", "SupportiveFamilyFriends.x", "GenerallyAccomplishGoal.x", "telehealth.x", "NightsHospitalMHC.y", "NightsDetox.y", "NightsJail.y", "TimesER.y", "Housing.y", "NumTimesArrested.y")]
 library(naniar)
 head(machine_dat)
 miss_var_summary(machine_dat)
 # All the VT's are missing a lot of data
-machine_dat = machine_dat[c("Quarter.x", "DiagnosisOne.x", "Gender.x", "HispanicLatino.x", "RaceWhite.x", "RaceBlack.x", "Agegroup.x", "SexualIdentity.x", "OverallHealth.x", "CapableManagingHealthCareNeeds.x", "HandlingDailyLife.x", "ControlLife.x", "DealWithCrisis.x", "GetsAlongWithFamily.x", "SocialSituations.x", "FunctioningHousing.x", "Symptoms.x", "Nervous.x", "Hopeless.x", "Restless.x", "Depressed.x", "EverythingEffort.x", "Worthless.x", "PsychologicalEmotionalProblems.x", "LifeQuality.x", "EnoughEnergyForEverydayLife.x", "PerformDailyActivitiesSatisfaction.x", "HealthSatisfaction.x", "RelationshipSatisfaction.x", "SelfSatisfaction.x", "Tobacco_Use.x", "Alcohol_Use.x", "Cannabis_Use.x", "Cocaine_Use.x", "Meth_Use.x", "RxOpioids_Use.x", "StreetOpioids_Use.x", "PhysicallyHurt.x", "NightsHomeless.x", "NightsHospitalMHC.x", "NightsDetox.x", "NightsJail.x", "TimesER.x", "Housing.x", "LivingConditionsSatisfaction.x", "Education.x", "Employment.x", "EnoughMoneyForNeeds.x", "NumTimesArrested.x", "Friendships.x", "EnjoyPeople.x", "BelongInCommunity.x", "SupportFromFamily.x", "SupportiveFamilyFriends.x", "GenerallyAccomplishGoal.x", "telehealth.x", "NightsHospitalMHC.y", "NightsDetox.y", "NightsJail.y", "TimesER.y", "Housing.y", "NumTimesArrested.y")]
+machine_dat = machine_dat[c("Quarter.x", "DiagnosisOne.x", "Gender.x", "HispanicLatino.x", "RaceWhite.x", "RaceBlack.x", "Agegroup.x", "SexualIdentity.x", "OverallHealth.x", "CapableManagingHealthCareNeeds.x", "HandlingDailyLife.x", "ControlLife.x", "DealWithCrisis.x", "GetsAlongWithFamily.x", "SocialSituations.x", "FunctioningHousing.x", "Symptoms.x", "Nervous.x", "Hopeless.x", "Restless.x", "Depressed.x", "EverythingEffort.x", "Worthless.x", "PsychologicalEmotionalProblems.x", "LifeQuality.x", "EnoughEnergyForEverydayLife.x", "PerformDailyActivitiesSatisfaction.x", "HealthSatisfaction.x", "RelationshipSatisfaction.x", "SelfSatisfaction.x", "Tobacco_Use.x", "Alcohol_Use.x", "Cannabis_Use.x", "Cocaine_Use.x", "Meth_Use.x", "RxOpioids_Use.x", "StreetOpioids_Use.x", "PhysicallyHurt.x", "NightsHospitalMHC.x", "NightsDetox.x", "NightsJail.x", "TimesER.x", "Housing.x", "LivingConditionsSatisfaction.x", "Education.x", "Employment.x", "EnoughMoneyForNeeds.x", "NumTimesArrested.x", "Friendships.x", "EnjoyPeople.x", "BelongInCommunity.x", "SupportFromFamily.x", "SupportiveFamilyFriends.x", "GenerallyAccomplishGoal.x", "telehealth.x", "NightsHospitalMHC.y", "NightsDetox.y", "NightsJail.y", "TimesER.y", "Housing.y", "NumTimesArrested.y")]
 miss_var_summary(machine_dat)
 apply(machine_dat,2, function(x){describe.factor(x)})
 #DiagnosisOne.x 62 = anxiety, 59 = mdd recurrent, 58 mdd single episode
@@ -312,29 +312,56 @@ Set up imputation
 ```{r}
 library(Amelia)
 machine_dat
+miss_var_summary(machine_dat)
+a.out_noms = amelia(x = machine_dat, m = 5, noms = c("Gender.x", "RaceWhite.x", "RaceBlack.x", "Housing.x", "Housing.y", "anxiety", "mdd_r", "mdd_s", "another_sex_ident", "er_hos_use_base", "jail_arrest_base", "er_hos_use_month6", "jail_arrest_month6"), logs = c("drug_use"))
+saveRDS(a.out_noms, file = "a.out_noms.rds")
 
-a.out_noms = amelia(x = machine_dat, m = 5, noms = c("Gender.x", "RaceWhite.x", "RaceBlack.x", "Housing.x", "Housing.y", "anxiety", "mdd_r", "mdd_s", "another_sex_ident", "er_hos_use_base", "jail_arrest_base", "er_hos_use_month6", "jail_arrest_month6"), logs = c("NightsHomeless.x"))
+compare.density(a.out_noms, var = "LivingConditionsSatisfaction.x")
+compare.density(a.out_noms, var = "GetsAlongWithFamily.x")
+compare.density(a.out_noms, var = "RelationshipSatisfaction.x")
+compare.density(a.out_noms, var = "drug_use")
 
+a.out_noms = readRDS(file = "a.out_noms.rds")
+impute_dat_noms = a.out_noms$imputations
+
+test_dat = impute_dat_noms$imp1
+hist(as.numeric(test_dat$LivingConditionsSatisfaction.x))
+range(as.numeric(test_dat$LivingConditionsSatisfaction.x))
 
 ```
+
 
 
 Create factors for factor variable so they are not centered
 Center the other factors
 ```{r}
 
-machine_dat[,-c(1,5:30, 33:42, 49)] = apply(machine_dat[,-c(1,5:30, 33:42, 49)], 2, function(x){as.factor(x)})
-machine_dat[,c(1,5:30, 33:42, 49)] = scale(machine_dat[,c(1,5:30, 33:42, 49)], center = TRUE, scale = FALSE)
-machine_dat
+test_dat[,-c(1,5:30, 33:42, 49)] = apply(test_dat[,-c(1,5:30, 33:42, 49)], 2, function(x){as.factor(x)})
+
+test_dat[,c(1,5:30, 33:42, 49)] = apply(test_dat[,c(1,5:30, 33:42, 49)], 2, function(x){as.numeric(x)})
+
+write.csv(test_dat, "test_dat.csv", row.names = FALSE)
+
+test_dat = read.csv("test_dat.csv", header  =TRUE)
+### Create seperate data sets to you don't have to write every variable out
+test_dat_Housing.y = test_dat 
+test_dat_Housing.y$jail_arrest_month6 = NULL
+test_dat_Housing.y$er_hos_use_month6 = NULL
+test_dat_Housing.y$Housing.y = as.factor(test_dat_Housing.y$Housing.y)
+
 
 ```
 
 
 Create testing and training 
 ```{r}
-machine_dat_idex =  createDataPartition(machine_dat$er_hos_use_base, p = .75,list = FALSE, times = 1)
-train = machine_dat[machine_dat_idex,]
-testing = machine_dat[-machine_dat_idex,]
+
+
+
+test_dat_house_index =  createDataPartition(test_dat_Housing.y$Housing.y, p = .75,list = FALSE, times = 1)
+train = test_dat_Housing.y[test_dat_house_index,]
+testing = test_dat_Housing.y[-test_dat_house_index,]
+
 
 ```
 Try fit control
@@ -346,12 +373,20 @@ fitControl <- trainControl(## 10-fold CV
                            repeats = 10)
 
 set.seed(825)
-gbmFit1 <- train(er_hos_use_base ~ ., data = pre_process_train, 
+gbmFit_er_hos <- train(er_hos_use_month6 ~ ., data = train, 
                  method = "gbm", 
                  trControl = fitControl,
                  ## This last option is actually one
                  ## for gbm() that passes through
-                 verbose = FALSE)
+                 verbose = TRUE)
+
+
+summary(gbmFit_er_hos)
+plsProbs <- predict(gbmFit_er_hos, newdata = testing, type = "prob")
+plsClasses <- predict(gbmFit_er_hos, newdata = testing)
+
+confusionMatrix(data = plsClasses, reference = testing$er_hos_use_month6)
+plsProbs
 ```
 
 
