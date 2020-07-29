@@ -310,6 +310,11 @@ dim(machine_dat_complete)
 ```
 Set up imputation
 ```{r}
+library(Amelia)
+machine_dat
+
+a.out_noms = amelia(x = machine_dat, m = 5, noms = c("Gender.x", "RaceWhite.x", "RaceBlack.x", "Housing.x", "Housing.y", "anxiety", "mdd_r", "mdd_s", "another_sex_ident", "er_hos_use_base", "jail_arrest_base", "er_hos_use_month6", "jail_arrest_month6"), logs = c("NightsHomeless.x"))
+
 
 ```
 
